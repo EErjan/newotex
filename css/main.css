@@ -1,0 +1,369 @@
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  overflow: -moz-scrollbars-none; }
+
+*, *:after, *:before {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none; }
+
+body {
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a {
+  padding: 0;
+  margin: 0;
+  color: #535353; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none; }
+
+p {
+  line-height: 1.4;
+  font-size: 14px;
+  color: #535353; }
+
+button {
+  outline: none !important;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer; }
+
+input {
+  text-decoration: none;
+  outline: none; }
+
+textarea {
+  border: 1px solid var(--color-border);
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px; }
+  textarea::placeholder {
+    color: #8DA2AD;
+    font-family: "Roboto", sans-serif; }
+
+body .multiselect {
+  min-height: 37px !important;
+  border-radius: 8px !important; }
+
+ul li {
+  list-style-type: none; }
+
+.list li:last-child {
+  margin-bottom: 0; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary); }
+
+img {
+  max-width: 100%; }
+
+button {
+  cursor: pointer; }
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 60px 0; }
+  .header__wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 3; }
+  .header__left {
+    display: flex;
+    align-items: center;
+    flex: 1; }
+  .header__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .header__menu {
+    display: flex;
+    align-items: center; }
+    .header__menu-item {
+      margin-right: 35px; }
+    .header__menu-link {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 1.5;
+      color: white; }
+  .header__contact {
+    margin-right: 45px; }
+    .header__contact h5 {
+      font-size: 16px;
+      text-align: right;
+      line-height: 19px;
+      color: white; }
+    .header__contact a {
+      font-size: 24px;
+      font-weight: 600;
+      color: white; }
+
+.logo {
+  margin-right: 35px; }
+  .logo img {
+    max-width: 172px;
+    width: 100%; }
+
+.main__banner {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .main__banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #152a47;
+    background: linear-gradient(0deg, #152a47 0%, rgba(12, 38, 89, 0.269345) 100%); }
+  .main__banner-wrap {
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    z-index: 2;
+    position: relative;
+    min-height: 100vh !important;
+    display: flex;
+    align-items: center; }
+  .main__banner-content {
+    width: 100%;
+    padding-bottom: 80px; }
+    .main__banner-content .hero-text {
+      width: 100%;
+      font-size: 72px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      color: white; }
+      .main__banner-content .hero-text span {
+        display: block;
+        font-size: 72px;
+        font-weight: 700; }
+    .main__banner-content p {
+      width: 100%;
+      font-size: 28px;
+      margin-bottom: 60px;
+      color: white; }
+  .main__banner-scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    align-items: center;
+    justify-content: center; }
+    .main__banner-scroll-down span {
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      margin-bottom: 15px;
+      width: 30px;
+      height: 50px;
+      border: 2px solid #fff;
+      border-radius: 50px;
+      box-sizing: border-box; }
+      .main__banner-scroll-down span::before {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        content: '';
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background-color: #fff;
+        border-radius: 100%;
+        -webkit-animation: sdb10 2s infinite;
+        animation: sdb10 2s infinite;
+        box-sizing: border-box; }
+    .main__banner-scroll-down h6 {
+      margin-right: -5px;
+      color: white; }
+
+@-webkit-keyframes sdb10 {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes sdb10 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+  .main__banner-socials {
+    position: absolute;
+    right: 0;
+    bottom: 50px; }
+    .main__banner-socials-ul {
+      position: relative;
+      display: flex;
+      align-items: center; }
+    .main__banner-socials-item {
+      margin-left: 30px; }
+      .main__banner-socials-item:first-child {
+        margin-left: 0; }
+    .main__banner-socials-link {
+      display: flex;
+      align-items: center; }
+      .main__banner-socials-link img {
+        margin-right: 14px; }
+      .main__banner-socials-link span {
+        display: inline-block; }
+
+.content__holder {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-gap: 30px;
+  width: 100%; }
+  .content__holder .sidebar {
+    padding: 20px; }
+    .content__holder .sidebar__title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px; }
+    .content__holder .sidebar__menu {
+      width: 100%;
+      padding: 20px;
+      border-radius: 26px;
+      background: #0c265914; }
+      .content__holder .sidebar__menu-item {
+        padding: 5px 0; }
+      .content__holder .sidebar__menu-link {
+        font-weight: 500; }
+
+.btn-main {
+  display: inline-block;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 60px;
+  padding: 18px 60px;
+  background-color: #000;
+  transition: .2s; }
+  .btn-main:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 15px 15px; }
+  .btn-main:active {
+    transform: translateY(0px);
+    box-shadow: unset; }
+
+.btn-light {
+  display: inline-block;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 60px;
+  padding: 18px 60px;
+  background-color: white;
+  transition: .2s; }
+  .btn-light:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 15px 15px; }
+  .btn-light:active {
+    transform: translateY(0px);
+    box-shadow: unset; }
+
+.btn-outlined {
+  border: 1px solid white;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600; }
+  .btn-outlined img {
+    margin-right: 10px; }
+  .btn-outlined-dark {
+    border: 1px solid #8699AA;
+    border-radius: 22px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #8699AA;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap; }
+
+:root {
+  --color-main: #0D2960;
+  --color-secondary: #1CA1EC;
+  --color-border: #E6E8EC;
+  --color-danger: #FF6157;
+  --color-warning: #FCD203;
+  --color-info: #E9F3F9;
+  --color-bg: #f8fbfe;
+  --color-text: #0C2659; }

@@ -1,0 +1,17 @@
+$font: (
+                ("Bold", 700),
+                ("SemiBold", 600),
+                ("Medium", 500),
+                ("Regular", 400),
+);
+
+@each $name, $weight in $font {
+  $url: "../fonts/Manrope-" + $name;
+  @font-face {
+    font-family: "Manrope";
+    src: url($url + ".ttf") format("truetype");
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
